@@ -28,36 +28,19 @@
 #ifndef TinkerKit_h
 #define TinkerKit_h
 
-
 // Minimum Analog In/Out that each platform have
-#define I0 A0
-#define I1 A1
-#define I2 A2
-#define I3 A3
-#define I4 A4
-#define I5 A5
-
-#define O0 11
-#define O1 10
-#define O2 9
-#define O3 6
-#define O4 5
-#define O5 3
-
-// Mega have more I/O
-#if defined(__AVR_ATmega2560__) || defined(__AVR_ATmega1280__)
-#define I6 A6
-#define I7 A7
-#define I8 A8
-#define I9 A9
-
-#define D13 13
-#define D12 12
-#define D8 8
-#define D7 7
-#define D4 4
 #define D2 2
-#endif
+#define D3 3
+#define D4 4
+#define D5 5
+#define D6 6
+#define D7 7
+#define D8 8
+#define D9 9
+#define D10 10
+#define D11 11
+#define D12 12
+#define D13 13
 
 #define TK_MAX 1023
 #define TK_X1 0	// identifies the 1x TKGyro model

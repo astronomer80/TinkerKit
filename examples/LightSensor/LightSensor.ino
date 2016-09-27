@@ -1,7 +1,7 @@
 /*
- Read values from the T000090 LDR Analog Sensor connected to I0, 
+ Read values from the T000090 LDR Analog Sensor connected to A0, 
  then uses the result to set the brightness on a T010111 LED 
- Module connected on O0. Also prints the values on the 
+ Module connected on D2. Also prints the values on the 
  serial monitor.
 
  created 29 Dec. 2008
@@ -13,15 +13,17 @@
  by Federico Vanzati
  modified Jun 2013
  by Matteo Loglio<http://matlo.me>
+ modified Sep 2016
+ by Angelo Ferrante
 
  This example code is in the public domain.
  */
 
 #include <TinkerKit.h>
 
-TKLightSensor ldr(I0);	//create the "ldr" object on port I0
+TKLightSensor ldr(A0);	//create the "ldr" object on port A0
 
-TKLed led(O0);		//create the "led" object on port O0
+TKLed led(D2);		//create the "led" object on port D2
 
 void setup() {
   // initialize serial communications at 9600 bps

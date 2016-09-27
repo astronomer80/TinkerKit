@@ -4,6 +4,10 @@
 #include <Esplora.h>
 #endif
 
+#if USB_VID == 0x2A03 && USB_PID == 0x803C
+#include <Esplora.h>
+#endif
+
 /*
  -----------------------------------------------------------------------------
                                     Generals
@@ -23,6 +27,12 @@ boolean TKDigital::read() {
     boolean val;
     
     #if USB_VID == 0x2341 && USB_PID == 0x803C
+        int value = Esplora.readTK(pin);
+        if (value < 128)
+            val = 0;
+        else
+            val = 1;
+    #elif USB_VID == 0x2A03 && USB_PID == 0x803C
         int value = Esplora.readTK(pin);
         if (value < 128)
             val = 0;
@@ -48,6 +58,8 @@ int TKAnalog::read() {
     int val;
     
     #if USB_VID == 0x2341 && USB_PID == 0x803C
+        val = Esplora.readTK(pin);
+    #elif USB_VID == 0x2A03 && USB_PID == 0x803C
         val = Esplora.readTK(pin);
     #else
         val = analogRead(pin);
@@ -101,6 +113,8 @@ int TKAnalog2::readX() {
     
     #if USB_VID == 0x2341 && USB_PID == 0x803C
         val = Esplora.readTK(pinX);
+    #elif USB_VID == 0x2A03 && USB_PID == 0x803C
+        val = Esplora.readTK(pinX);
     #else
         val = analogRead(pinX);
     #endif
@@ -114,6 +128,8 @@ int TKAnalog2::readY() {
     
     #if USB_VID == 0x2341 && USB_PID == 0x803C
         val = Esplora.readTK(pinY);
+    #elif USB_VID == 0x2A03 && USB_PID == 0x803C
+        val = Esplora.readTK(pinY);
     #else
         val = analogRead(pinY);
     #endif
@@ -126,6 +142,8 @@ int TKAnalog2::readZ() {
     int val;
     
     #if USB_VID == 0x2341 && USB_PID == 0x803C
+        val = Esplora.readTK(pinZ);
+    #elif USB_VID == 0x2A03 && USB_PID == 0x803C
         val = Esplora.readTK(pinZ);
     #else
         val = analogRead(pinZ);

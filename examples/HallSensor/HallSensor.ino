@@ -1,9 +1,9 @@
 /*
- The Hall Sensor [T000070] is connected to I0 and it's
+ The Hall Sensor [T000070] is connected to A0 and it's
  able to detect the magnetic field polarity.
  This sketch turns on and off an LED using 
  the polarity of a magnet
- http://www.tinkerkit.com/hall/ 
+ http://www.arduino.org/tinkerkit
   
  created on 7 Dec 2010
  by Davide Gomba 
@@ -11,6 +11,8 @@
  by Federico Vanzati
  modified on Jun 2013
  by Matteo Loglio
+ modified on Sep 2016
+ by Angelo Ferrante
 
  This example code is in the public domain.
  */
@@ -18,10 +20,10 @@
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKHallSensor hs(I0);	// creating the object 'hs' that belongs to the 'TKHallSensor' class 
+TKHallSensor hs(A0);	// creating the object 'hs' that belongs to the 'TKHallSensor' class 
                         // and giving the value to the desired input pin
 
-TKLed led(O0);		// creating the object 'led' that belongs to the 'TKLed' class 
+TKLed led(D2);		// creating the object 'led' that belongs to the 'TKLed' class 
 			// and giving the value to the desired output pin
 
 void setup()

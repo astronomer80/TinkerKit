@@ -1,11 +1,10 @@
 /*
  Tilt Sensor
  
- Turns on and off a LED connected to O0,  
- triggered by a Tilt Sensor attached to I0.
+ Turns on and off a LED connected to A0,  
+ triggered by a Tilt Sensor attached to D2.
  
- http://www.tinkerkit.com/led-green-10mm/
- http://www.tinkerkit.com/tilt-sensor/
+ http://www.arduino.org/tinkerkit
 
  created 2005
  by DojoDave <http://www.0j0.org>
@@ -17,16 +16,19 @@
  by Priya Kuber & Federico Vanzati
  modified 7 Jun 2013
  by Matteo Loglio <http://matlo.me>
+ modified on Sep 2016
+ by Angelo Ferrante
+
  
  This example code is in the public domain.
  */
 
 #include <TinkerKit.h> 
 
-TKTiltSensor tilt(I0);  // creating the object 'tilt' that belongs to the 'TKTiltSensor' class 
+TKTiltSensor tilt(A0);  // creating the object 'tilt' that belongs to the 'TKTiltSensor' class 
       // and giving the value to the desired input pin
 
-TKLed led(O0);          // creating the object 'led' that belongs to the 'TKLed' class 
+TKLed led(D2);          // creating the object 'led' that belongs to the 'TKLed' class 
                         // and giving the value to the desired output pin
 
 

@@ -1,16 +1,18 @@
 /* TinkerKit! Gyroscope [T000062-64]
-   http://www.tinkerkit.com/gyroscope-4x/
+   http://www.arduino.org/tinkerkit
    
   This sketch shows how to read this 2-axis gyroscope,
   turning in a given angular velocity and then converting it
   in the simplest way in an angular position (/inclination).
  
-  Connect: the X-axis to the I0 port
-           the Y-axis to the I1 port
-  Optional: connect a servo to O2 port
+  Connect: the X-axis to the A0 port
+           the Y-axis to the A1 port
+  Optional: connect a servo to D3 port
  
   created by Federico Vanzati / f.vanzati@arduino.cc
   in Dec 2011
+  modified by Angelo Ferrante
+  on Sep 2016
  
   inspired from www.arduino.cc/playground/Main/Gyro
   by eric barch / ericbarch.com
@@ -21,9 +23,9 @@
 #include <Servo.h>
 #include <TinkerKit.h>
 
-TKGyro gyro(I0, I1, TK_X4);
+TKGyro gyro(A0, A1, TK_X4);
 
-const int SERVO = O2;  // Pin on which is connected the servo 
+const int SERVO = D3;  // Pin on which is connected the servo 
 
 Servo myservo;  // create servo object to control a servo
 

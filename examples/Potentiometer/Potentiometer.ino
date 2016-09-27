@@ -1,7 +1,7 @@
 /*
- Read the value of a T000140 Potentiometer connected to I0, 
+ Read the value of a T000140 Potentiometer connected to A0, 
  then uses the results to write the brightness on a T010111 
- LED Module connected on O0. Also prints the values 
+ LED Module connected on D2. Also prints the values 
  on the serial monitor.
 
  created 29 Dec. 2008
@@ -13,16 +13,18 @@
  by Federico Vanzati
  modified on Jun 2013
  by Matteo Loglio<http://matlo.me>
+ modified on Sep 2016
+ by Angelo Ferrante
 
  This example code is in the public domain.
  */
 
 #include <TinkerKit.h>
 
-TKPotentiometer pot(I0);// creating the object 'pot' that belongs to the 'TKPotentiometer' 
-                        // class. Hooked up on I0
+TKPotentiometer pot(A0);// creating the object 'pot' that belongs to the 'TKPotentiometer' 
+                        // class. Hooked up on A0
 
-TKLed led(O0);		// creating the object 'led' that belongs to the 'TKLed' class 
+TKLed led(D2);		// creating the object 'led' that belongs to the 'TKLed' class 
                         // and giving the value to the desired output pin
 
 int brightnessVal = 0;  // value read from the pot

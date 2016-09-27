@@ -1,14 +1,17 @@
 /*
- Reads a T000064 Gyro Module with the x-axis connected to I0 pin
- the y-axis connected to the I1 pin then prints 
+ Reads a T000064 Gyro Module with the x-axis connected to A0 pin
+ the y-axis connected to the A1 pin then prints 
  the results to the serial monitor.
- http://www.tinkerkit.com/gyroscope-4x/
+ http://www.arduino.org/tinkerkit
    
 
  created on Dec 2011
  by Federico Vanzati
  modified on Jun 2013
  by Matteo Loglio <http://matlo.me>
+ modified on Sep 2016
+ by Angelo Ferrante
+
 
  This example code is in the public domain.
  */
@@ -16,7 +19,7 @@
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKGyro gyro(I0, I1, TK_X4);  // creating the object 'gyro' that belongs to the 'TKGyro' class 
+TKGyro gyro(A0, A1, TK_X4);  // creating the object 'gyro' that belongs to the 'TKGyro' class 
                        	     // and giving the values to the desired input pins
                              // using the 4x amplified module, insert the TK_4X costant.
 

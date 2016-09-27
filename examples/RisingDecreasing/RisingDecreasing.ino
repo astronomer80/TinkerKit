@@ -9,6 +9,8 @@ Increasing & Decreasing
  
  created 1 Jul 2013
  by Matteo Loglio (matlo.me)
+ modified on Sep 2016
+ by Angelo Ferrante
  
  This example code is in the public domain.
  */
@@ -16,7 +18,7 @@ Increasing & Decreasing
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKThermistor therm(I0);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
+TKThermistor therm(A0);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
 // and giving the value to the desired output pin
 
 void setup()

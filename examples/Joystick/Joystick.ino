@@ -1,9 +1,8 @@
 /*
- Reads a T000030 Joystick Module Analog Sensor connected to I0 and I1,
- then set the brightness of two T010111 LED Module connected on O0 and O1
+ Reads a T000030 Joystick Module Analog Sensor connected to A0 and A1,
+ then set the brightness of two T010111 LED Module connected on D2 and D3
  with the values. Also prints the results to the serial monitor.
- http://www.tinkerkit.com/joystick/
- http://www.tinkerkit.com/led-green-10mm/
+ http://www.arduino.org/tinkerkit
 
  created  7 dec 2010
  by Davide Gomba 
@@ -11,6 +10,9 @@
  by Federico Vanzati
  modified on Jun 2013
  by Matteo Loglio<http://matlo.me>
+ modified on Sep 2016
+ by Angelo Ferrante
+
 
  This example code is in the public domain.
  */
@@ -18,10 +20,10 @@
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKJoystick joystick(I0, I1);  // creating the object 'joystick' that belongs to the 'TKJoystick' class 
+TKJoystick joystick(A0, A1);  // creating the object 'joystick' that belongs to the 'TKJoystick' class 
                        	      // and giving the values to the desired input pins
 
-TKLed xLed(O0), yLed(O1);     // creating the objects 'xLed' & 'yLed' that both belongs to the 'TKLed' class 
+TKLed xLed(D2), yLed(D3);     // creating the objects 'xLed' & 'yLed' that both belongs to the 'TKLed' class 
                               // and giving the values to the desired output pins
 
 int x = 0;      // a variable for the Joystick's x value

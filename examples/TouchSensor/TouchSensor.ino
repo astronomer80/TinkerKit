@@ -1,16 +1,18 @@
 /*
  Touch Sensor
 
- Turns on and off a T010111 LED Module connected to O0,
- when pressing a T000220 Touch Sensor attached to I0.
+ Turns on and off a T010111 LED Module connected to D2,
+ when pressing a T000220 Touch Sensor attached to A0.
  
- http://www.tinkerkit.com/led-green-10mm/
- http://www.tinkerkit.com/touch/
+ http://www.arduino.org/tinkerkit
 
  · created in Dec 2011
    by Federico Vanzati
  · modified in Jun 2013 
    by Matteo Loglio <http://matlo.me>
+ · modified in Sep 2016
+   by Angelo Ferrante
+
 
  This example code is in the public domain.
  */
@@ -18,10 +20,10 @@
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKTouchSensor touch(I0);// creating the object 'touch' that belongs to the 'TKTouchSensor' class 
+TKTouchSensor touch(A0);// creating the object 'touch' that belongs to the 'TKTouchSensor' class 
                         // and giving the value to the desired input pin
 
-TKLed led(O0);		// creating the object 'led' that belongs to the 'TKLed' class 
+TKLed led(D2);		// creating the object 'led' that belongs to the 'TKLed' class 
                         // and giving the value to the desired output pin
 
 

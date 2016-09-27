@@ -1,8 +1,12 @@
-/*Use an LED to verify the serial communication*/
+/*Use an LED to verify the serial communication
+modified by Angelo Ferrante
+on Sep 2016
+*/
+
 
 #include <TinkerKit.h>
 
-TKLed led(13);
+TKLed led(D13);
 
 int incomingByte;    // a variable to read incoming serial data
 

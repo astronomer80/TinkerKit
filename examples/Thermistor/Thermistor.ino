@@ -1,8 +1,8 @@
 /*
 Thermistor
-http://www.tinkerkit.com/thermistor/
+http://www.arduino.org/tinkerkit
 
-The TinkerKit Thermistor Module [T00020] is hooked up on I0.
+The TinkerKit Thermistor Module [T00020] is hooked up on A0.
 Three values are displayed on the Serial Monitor every second:
 - the value between 0 and 1023 that represent the Analog Input reading
 - the temperature expressed in Celsius degrees
@@ -12,6 +12,8 @@ created 29 Nov 2011
 by Federico Vanzati
 modified in Jun 2013
 by Matteo Loglio<http://matlo.me>
+modified in Sep 2016
+by Angelo Ferrante
 
 This example code is in the public domain.
 */
@@ -19,7 +21,7 @@ This example code is in the public domain.
 // include the TinkerKit library
 #include <TinkerKit.h>
 
-TKThermistor therm(I0);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
+TKThermistor therm(A0);       // creating the object 'therm' that belongs to the 'TKThermistor' class 
                               // and giving the value to the desired output pin
 
 float C, F;		      // temperature readings are returned in float format
